@@ -28,13 +28,13 @@ namespace AmazonProject
             {
                 switch (key)
                 {
-                    case "Price Lower Then":
+                    case "Price_Lower_Then":
                         xPath += "and descendant::span[@class='a-offscreen' and translate(text(),'$,','')<" + filters[key] + " and parent::span[not(contains(@data-a-strike,'true'))]]";
                         break;
-                    case "Price Higher Or Equal Then":
+                    case "Price_Hiegher_OR_Equal_Then":
                         xPath += "and descendant::span[@class='a-offscreen' and translate(text(),'$,','')>=" + filters[key] + " and parent::span[not(contains(@data-a-strike,'true'))]]";
                         break;
-                    case "Free Shipping":
+                    case "Free_Shipping":
                         if (filters[key].Equals("true"))
                         {
                             xPath += "and descendant::span[@class='a-color-base a-text-bold' and contains (text(),'FREE')]";

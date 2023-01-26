@@ -24,9 +24,9 @@ namespace AmazonProject
             driver = BrowserFactory.InitBrowser("firefox", new List<string> {});
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
-            filter.Add("Price Lower Then", "100");
-            filter.Add("Price Higher Or Equal Then", "10");
-            filter.Add("Free Shipping", "true");
+            filter.Add("Price_Lower_Then", "100");
+            filter.Add("Price_Hiegher_OR_Equal_Then", "50");
+            filter.Add("Free_Shipping", "true");
         }
 
         [Test]
